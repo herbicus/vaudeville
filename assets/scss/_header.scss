@@ -1,0 +1,55 @@
+// -------------------------------------
+//   Header
+// -------------------------------------
+// ----- Header nav/monbile nav stylings
+// -------------------------------------
+
+header {
+
+  nav {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+
+    .three-col {
+      //@include shadow-border(green);
+      height: 200px;
+      position: relative;
+
+      @include grayscale-hover;
+
+      h1 {
+        @include centerer;
+        top: 65%;
+      }
+    }
+
+    .l-sign-left {
+      background: url(../img/sign-sml.png);
+      @include bg-contain;
+      background-position: top, center;
+      top: -15em;
+      opacity: 0;
+    }
+
+    .l-sign-main {
+      height: 300px;
+      background: url(../img/sign-main.png);
+      @include bg-contain;
+      background-position: top, center;
+      top: -15em;
+      opacity: 0;
+    }
+
+    .l-sign-right {
+      background: url(../img/sign-sml.png);
+      @include bg-contain;
+      background-position: top, center;
+      top: -15em;
+      opacity: 0;
+
+    }
+  }
+
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vaudeville</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Herb Torres">
+        
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <!-- <link rel="icon" type="logo" href="assets/img/logo.png"> -->
+
+        <link rel="stylesheet" href="assets/css/styles.min.css">
+        <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+       <!-- HEADER SIGNS -->
+        <header>
+            <nav>
+                <div class="three-col l-sign-left"><h1>Products</h1></div>
+                <div class="three-col l-sign-main"><h1>Vaudeville</h1></div>
+                <div class="three-col l-sign-right"><h1>Shop</h1></div>
+            </nav>
+        </header>
+
+
+        <!-- STAGE CONTAINER -->
+       <div class="l-stage-container">
+            <!-- CURTAINS -->
+            <div class="l-curtain-container" id="pane">
+                <!-- <img src="assets/img/asset-top.png" alt="curtain-top" class="curtain l-curtain-top">
+                <img src="assets/img/asset-left.png" alt="curtain-top" class="curtain l-curtain-left">
+                <img src="assets/img/asset-right.png" alt="curtain-top" class="curtain l-curtain-right"> -->
+                <div class="curtain l-curtain-top"></div>
+                <div class="curtain l-curtain-left"></div>
+                <div class="curtain l-curtain-right"></div>
+            </div>
+       </div>
+
+        <section class="content-wrap l-product-container">
+            <a href="#" data-reveal-id="productModal">
+                <div class="third"></div>
+            </a>
+
+            <a href="#" data-reveal-id="product2Modal">
+                <div class="third"></div>
+            </a>
+
+            <a href="#" data-reveal-id="product3Modal">
+                <div class="third"></div>
+            </a>
+
+            <!-- <div class="third"></div>
+            <div class="third"></div>
+            <div class="third"></div> -->
+        </section>
+
+        <!-- Reveal Modals begin -->
+        <div id="productModal" class="reveal-modal" data-reveal>
+
+          <div class="half">
+              <img src="http://placekitten.com/g/350/300" alt="">
+              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+          </div>
+          <div class="half">
+              <h1>Mascara</h1>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
+              <img src="assets/img/sample-colors.png" alt="">
+          </div>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="product2Modal" class="reveal-modal" data-reveal>
+          <div class="half">
+              <img src="http://placekitten.com/g/350/300" alt="">
+              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+          </div>
+          <div class="half">
+              <h1>Eye Shadow</h1>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
+              <img src="assets/img/sample-colors.png" alt="">
+          </div>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <div id="product3Modal" class="reveal-modal" data-reveal>
+          <div class="half">
+              <img src="http://placekitten.com/g/350/300" alt="">
+              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+          </div>
+          <div class="half">
+              <h1>Eye Shadow</h1>
+              <hr>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
+              <img src="assets/img/sample-colors.png" alt="">
+          </div>
+          <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <!-- CHARACTER -->
+        <div class="l-character-container" id="box"></div>
+
+
+
+       <!-- END STAGE -->
+
+       
+
+      
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
+        <!--
+        <script src="assets/js/vendor/TweenMax.min.js"></script>
+        -->
+        <script src="assets/js/plugins/jquery.reveal.js"></script>
+        
+        <!-- NO MINIFY - DEV & TEST -->
+        <script src="assets/js/main.js"></script>
+        <!-- <script src="assets/js/main.min.js"></script>
+        -->
+        <!-- REMOVE main.js/UNCOMMENT main.min.js FOR PRODUCTION -->
+
+        <!-- LIVERELOADING FOR GRUNT -->
+        <script src="//localhost:35729/livereload.js"></script>
+        <!-- REMOVE FOR PRODUCTION -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script> -->
+    </body>
+</html>

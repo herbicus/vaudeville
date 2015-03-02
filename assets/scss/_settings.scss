@@ -1,0 +1,130 @@
+// -------------------------------------
+//   Settings
+// -------------------------------------
+// ----- @Font-Face Declarations, Variables
+// -------------------------------------
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// Add fonts to project as needed in the following format -
+// 'font-name': 'font-folder'
+
+// $fonts: (
+//   'font-name': 'font-folder',
+//   'font-name-two': 'font-folder-two'
+// );
+
+// @each $font-name, $font-folder in $fonts {
+//   @font-face {
+//     font-family: #{$font-name};
+//     src: url('path/to/fonts/#{$font-folder}/#{$font-name}.eot?#iefix') format('embedded-opentype'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.woff') format('woff'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.ttf') format('truetype'),
+//          url('path/to/fonts/#{$font-folder}/#{$font-name}.svg##{$font-name}') format('svg');
+//   }
+// }
+
+@font-face {
+    font-family: 'gotham_condensedbold';
+    src: url('../fonts/gothamcondensed-bold-webfont.eot');
+    src: url('../fonts/gothamcondensed-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothamcondensed-bold-webfont.woff2') format('woff2'),
+         url('../fonts/gothamcondensed-bold-webfont.woff') format('woff'),
+         url('../fonts/gothamcondensed-bold-webfont.ttf') format('truetype'),
+         url('../fonts/gothamcondensed-bold-webfont.svg#gotham_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_condensedmedium';
+    src: url('../fonts/gothamcondensed-medium-webfont.eot');
+    src: url('../fonts/gothamcondensed-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothamcondensed-medium-webfont.woff2') format('woff2'),
+         url('../fonts/gothamcondensed-medium-webfont.woff') format('woff'),
+         url('../fonts/gothamcondensed-medium-webfont.ttf') format('truetype'),
+         url('../fonts/gothamcondensed-medium-webfont.svg#gotham_condensedmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gotham_condensed_lightregular';
+    src: url('../fonts/gothamcondensed-light-webfont.eot');
+    src: url('../fonts/gothamcondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gothamcondensed-light-webfont.woff2') format('woff2'),
+         url('../fonts/gothamcondensed-light-webfont.woff') format('woff'),
+         url('../fonts/gothamcondensed-light-webfont.ttf') format('truetype'),
+         url('../fonts/gothamcondensed-light-webfont.svg#gotham_condensed_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Colors ----- //
+
+// COlORS
+
+$muteAqua: #1abc9c;
+$aqua: #16a085;
+$muteGreen: #2ecc71;
+$green: #27ae60;
+$muteBlue: #3498db;
+$blue: #2980b9;
+$mutePurple: #9b59b6;
+$purple: #8e44ad;
+$muteNavy: #34495e;
+$navy: #2c3e50;
+$yellow: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$brightRed: #e74c3c;
+$deepRed: #c0392b;
+$clouds: #ecf0f1;
+$cream: #fafafa;
+$silver: #bdc3c7;
+$muteGrey: #95a5a6;
+$grey: #7f8c8d;
+$charcoal: #444444;
+
+// ----- Type ----- //
+
+// FLASHES
+
+.success {
+	@extend %flash-success;
+}
+
+.error {
+	@extend %flash-error;
+}
+
+.notice {
+	@extend %flash-notice;
+}
+
+.alert {
+	@extend %flash-alert;
+}
+
+// LISTS
+
+ol.default {
+	@extend %default-ol;
+}
+
+ul.default {
+	@extend %default-ul;
+}
+
+
+// ----- Grid ----- //

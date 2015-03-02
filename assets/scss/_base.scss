@@ -1,0 +1,180 @@
+// -------------------------------------
+//   Base
+// -------------------------------------
+// ----- Global defaults for Base-level tags (body, p, etc.)
+// -------------------------------------
+
+// ----- Uncomment if project will be using rems ----- //
+// html {
+//   font-size: 62.5%;
+// }
+
+p {
+	color: $charcoal;
+}
+
+a {
+	color: $deepRed;
+	text-decoration: none;
+	@include transition (all 0.3s ease-in-out);
+	&:hover {
+		cursor: pointer;
+		color: $brightRed;
+		text-decoration: underline;
+	}
+}
+
+// ANIMATED UNDERLINE HOVER - STATE
+
+// a {
+// 	display: inline-block;
+// 	padding: 15px 20px;
+// 	position: relative;
+// 	&:after {    
+// 		background: none repeat scroll 0 0 transparent;
+// 		bottom: 0;
+// 		content: "";
+// 		display: block;
+// 		height: 2px;
+// 		left: 50%;
+// 		position: absolute;
+// 		background: #fff;
+// 		@include transition(width 0.3s ease 0s, left 0.3s ease 0s);
+// 		width: 0;
+// 	}
+// 	&:hover:after { 
+// 		width: 100%; 
+// 		left: 0; 
+// 	}
+// }
+
+// END ANIMATED UNERLINE HOVER - STATE
+
+
+
+// ANIMATED HAMBURGER ICON TOGGLE BUTTON
+
+// .mobile-nav-btn {
+// 	position: absolute;
+// 	z-index: 9999; 
+// 	width: 60px;
+// 	height: 120px;
+// 	left: 90%;
+// 	top: -40%;
+// 	@include transition-duration(0.5s);
+
+// 	.icon {
+// 		@include transition-duration(0.5s);
+// 		position: absolute;
+// 		height: 4px;
+// 		width: 30px;
+// 		top: 60px;
+// 		background-color: #fff;
+
+// 		&:before {
+// 			@include transition-duration(0.5s);
+// 			position: absolute;
+// 			height: 4px;
+// 			width: 30px;
+// 			background-color: #fff;
+// 			content: "";
+// 			top: -10px;
+// 		}
+
+// 		&:after {
+// 			@include transition-duration(0.5s);
+// 			position: absolute;
+// 			height: 4px;
+// 			width: 30px;
+// 			background-color: #fff;
+// 			content: "";
+// 			top: 10px;
+// 		}
+
+// 		&:hover{
+// 		  cursor: pointer;
+// 		}
+// 	}
+
+// 	&.open {
+// 		.icon {
+// 			@include transition-duration(0.5s);
+// 			background: transparent;
+			
+// 			&:before {
+// 			  @include transform( rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px) );
+// 			}
+
+// 			&:after {
+// 			  @include transform( rotateZ(-45deg) scaleX(1.25) translate(6px, -6px) );
+// 			}
+// 		}				
+// 	}	
+// } 
+
+// END ANIMATED HAMBURGER TOGGLE BUTTON
+
+// MODAL MARKUP
+
+.reveal-modal-bg {
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: rgba(0,0,0,.8);
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0; 
+	}
+
+.reveal-modal {
+	visibility: hidden;
+	top: 100px; 
+	left: 50%;
+	//margin-left: -300px;
+	//width: 520px;
+	//width: 100%;
+	float: left;
+	background: #eee url(../img/modal-gloss.png) no-repeat -200px -80px;
+	position: absolute;
+	z-index: 101;
+	padding: 30px 40px 34px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	//@include centerer;
+	@include coverer;
+	width: 90%;
+	height: 90%;
+	//top: 50% !important;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	img {
+		width: 100%;
+		max-width: 100%;
+	}
+	.half {
+		width: 46.82117%;
+	}
+}
+	
+.reveal-modal.small 		{ width: 200px; margin-left: -140px;}
+.reveal-modal.medium 		{ width: 400px; margin-left: -240px;}
+.reveal-modal.large 		{ width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge 		{ width: 800px; margin-left: -440px;}
+
+.reveal-modal .close-reveal-modal {
+	font-size: 22px;
+	line-height: .5;
+	position: absolute;
+	top: 8px;
+	right: 11px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	font-weight: bold;
+	cursor: pointer;
+	} 

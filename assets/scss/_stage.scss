@@ -1,0 +1,132 @@
+// -------------------------------------
+//   Stage Layout
+// -------------------------------------
+// ----- Stage specific
+// -------------------------------------
+
+.l-stage-container {
+	background: url(../img/stage-bg.jpg);
+	@include bg-cover;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.curtain {
+	position: absolute;
+	height: 100%;
+}
+
+.l-curtain-container {
+	background: transparent;
+  // COMMENT BELOW IF USE 3 CURTAINS
+//  background: url("../img/asset-whole.png");
+//  width: 100%;
+//  height: 100%;
+//  position: relative;
+//  z-index: 5;
+//  @include bg-cover;
+//  background-position: top, center;
+
+	.l-curtain-top {
+		background: url("../img/asset-top.png");
+		@include bg-contain;
+		background-position: top, center;
+		width: 100%;
+    	height: 30%;
+    	margin-top: -20%;
+    	opacity: 0;
+		top: 0;
+		z-index: 5;
+
+	}
+
+	.l-curtain-left {
+		background: url("../img/asset-left.png");
+		background: url("../img/curtain-left.png");
+		@include bg-contain;
+		background-position: left, center;
+		width: 32%;
+		top: 0;
+		left: 0;
+		left: -20%;
+		opacity: 0;
+		z-index: 4;
+
+	}
+
+	.l-curtain-right {
+		background: url("../img/asset-right.png");
+		background: url("../img/curtain-right.png");
+		@include bg-contain;
+		background-position: right, center;
+		width: 30%;
+		top: 0;
+		right: 0;
+		right: -20%;
+		opacity: 0;
+		z-index: 4;
+	}
+
+	@include media(max-width 768px, 6) {
+		background: url("../img/asset-whole.png");
+		@include bg-cover;
+		background-position: top, center;
+		height: 100%;
+		.l-curtain-top, .l-curtain-left, .l-curtain-right {
+			display: none;
+		} 
+	}
+}
+
+@-webkit-keyframes neon1 {
+  from {
+    box-shadow: 0 0 1px #fff,
+    0 0 5px  #fff,
+    0 0 7.5px  #fff,
+    0 0 10px  #994b52,
+    0 0 17.5px  #994b52,
+    0 0 20px  #994b52,
+    0 0 25px #994b52,
+    0 0 37.5px #994b52;
+  }
+  to {
+    box-shadow: 0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #994b52,
+    0 0 35px #994b52,
+    0 0 40px #994b52,
+    0 0 50px #994b52,
+    0 0 75px #994b52;
+  }
+}
+
+.l-product-container {
+	@include centerer;
+	top: 55%;
+	height: 600px;
+	.third {
+		height: 300px;
+		margin: 0 0.77%;
+		background: url("http://placekitten.com/g/300/150");
+		@include bg-cover;
+		@include pop-hover(1.05);
+
+    // CSS Animations
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    &:hover {
+      cursor: pointer;
+    box-shadow: 0 transparent !important;
+    }
+    &:active {
+      //box-shadow: none;
+      box-shadow: 0 transparent !important;
+    }
+	}
+
+
+}
+
