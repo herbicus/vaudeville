@@ -69,6 +69,8 @@ var cornerstoneAPI = (function(options) {
 	openAnimation.to(".l-sign-main", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.15);
 	openAnimation.to(".l-sign-left", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.25);
 	openAnimation.to(".l-sign-right", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.25);
+	// openAnimation.to(".l-sign-right, .l-sign-main, .l-sign-left", 1, { left: "1%", yoyo: true, repeatDelay: 0.5, ease: Back.easeInOut});
+
 
 
 	var menuAnimation = new TimelineMax({paused: true});
@@ -116,25 +118,41 @@ var cornerstoneAPI = (function(options) {
 	        left: function(i,v) { return newv(v, 37, 39); },
 	        top: function(i,v) { return newv(v, 38, 40); }
 	      });
+	      // console.log(box.position())
+	      // left less than 201
+	      // top less than 210
+	      if (box.position().left < 201 && box.position().top < 210) {
+	      	console.log("in the zone");
+	      }
+
+
 	    }, 20);
 
-	    var moveLeft = "url(assets/img/move-left.gif)";
-	    var moveRight = "url(assets/img/move-right.gif)";
+
+
+	    var standStill = "url(assets/img/character-v2.png)";
+	    var moveLeft = "url(assets/img/move-left-x.gif)";
+	    var moveRight = "url(assets/img/move-right-x.gif)";
 
 	    $(window).on("keydown", function(){
 	      if (event.keyCode == 37) {
-	        console.log("left");
+	        //console.log("left");
 	        box.css({background: moveLeft})
 	      }else if(event.keyCode == 39){
-	        console.log("right");
+	        //console.log("right");
 	        box.css({background: moveRight})
 	      }else if(event.keyCode == 38){
-	        console.log("right");
+	        //console.log("right");
 	        box.css({background: moveLeft})
 	      }else if(event.keyCode == 40){
-	        console.log("right");
+	        //console.log("right");
 	        box.css({background: moveRight})
 	      };
+
+	    });
+
+	    $(window).on("keyup", function(){
+	      box.css({background: standStill})
 
 	    });
 	}; // END init

@@ -122,6 +122,8 @@ a {
 	width: 100%;
 	background: #000;
 	background: rgba(0,0,0,.8);
+	background: url("../img/modal-bg.jpg");
+	@include bg-cover;
 	z-index: 100;
 	display: none;
 	top: 0;
@@ -136,7 +138,9 @@ a {
 	//width: 520px;
 	//width: 100%;
 	float: left;
-	background: #eee url(../img/modal-gloss.png) no-repeat -200px -80px;
+	//background: #eee url(../img/modal-gloss.png) no-repeat -200px -80px;
+	background: url("../img/modal-place.png");
+	@include bg-contain;
 	position: absolute;
 	z-index: 101;
 	padding: 30px 40px 34px;

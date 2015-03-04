@@ -5,7 +5,7 @@
 // -------------------------------------
 
 .l-stage-container {
-	background: url(../img/stage-bg.jpg);
+	background: url(../img/stage-bg-x.jpg);
 	@include bg-cover;
 	position: absolute;
 	width: 100%;
@@ -109,7 +109,7 @@
 	.third {
 		height: 300px;
 		margin: 0 0.77%;
-		background: url("http://placekitten.com/g/300/150");
+		background: url("../img/stager-place.png");
 		@include bg-cover;
 		@include pop-hover(1.05);
 

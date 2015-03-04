@@ -26,7 +26,7 @@ header {
     }
 
     .l-sign-left {
-      background: url(../img/sign-sml.png);
+      background: url(../img/sign-left.png);
       @include bg-contain;
       background-position: top, center;
       top: -15em;
@@ -35,7 +35,7 @@ header {
 
     .l-sign-main {
       height: 300px;
-      background: url(../img/sign-main.png);
+      background: url(../img/sign-main-full.png);
       @include bg-contain;
       background-position: top, center;
       top: -15em;
@@ -43,7 +43,7 @@ header {
     }
 
     .l-sign-right {
-      background: url(../img/sign-sml.png);
+      background: url(../img/sign-right.png);
       @include bg-contain;
       background-position: top, center;
       top: -15em;
