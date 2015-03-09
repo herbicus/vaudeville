@@ -82,6 +82,11 @@ canvas {
 	@include bg-contain;
 }
 
+.l-demo-4 {
+	background: url("../img/makup-place3.png");
+	@include bg-contain;
+}
+
 .add-me {
 	display: block !important;
 	//opacity: 1;

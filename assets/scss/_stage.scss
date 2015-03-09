@@ -124,6 +124,9 @@
 			display: table-cell;
 			vertical-align: middle;
 			text-transform: uppercase;
+			font-family: 'Dynalight', cursive;
+			color: #000;
+			text-shadow: 0 2px 2px #fff;
 		}
 		
 		@include media(max-width 768px, 6) {
@@ -152,12 +155,31 @@
 	    }
 	}
 
+	.l-product-shizo {
+		background: url("../img/product-img-shizo.png");
+		@include bg-cover;
+	}
+
+	.l-product-widow {
+		background: url("../img/product-img-widow.png");
+		@include bg-cover;
+	}
+
+	.l-product-night {
+		background: url("../img/product-img-night.png");
+		@include bg-cover;
+	}
+
 	@include media(max-width 1024px, 6) {
 	  top: 65%;
 	}
 
 	@include media(max-width 768px, 6) {
 	  top: 45%;
+	}
+
+	@include media(max-width 620px, 6) {
+	  top: 55%;
 	}
 
 	@include media(max-width 480px, 6) {

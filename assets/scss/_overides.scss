@@ -136,7 +136,7 @@
   position: relative;
   overflow: hidden;
   
-  p {
+  h1 {
     padding-top: 45%;
   }
 
@@ -151,5 +151,84 @@
     }
   }
 }
+
+.modal-product-copy-2 {
+  background: url("../img/widow-type.png");
+  @include bg-contain;
+  background-position: top center;
+  margin: 2%;
+  background-position: 0 4%;
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+  
+  h1 {
+    padding-top: 45%;
+  }
+
+  img {
+    //padding: 10%;
+    @include media(max-width 1280px, 6) {
+      max-width: 260px;
+    }
+
+    @include media(max-width 768px, 6) {
+      width: 175px;
+    }
+  }
+}
+
+.modal-product-copy-3 {
+  background: url("../img/nightmare-type.png");
+  @include bg-contain;
+  background-position: top center;
+  margin: 2%;
+  background-position: 0 4%;
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+  
+  h1 {
+    padding-top: 45%;
+  }
+
+  img {
+    //padding: 10%;
+    @include media(max-width 1280px, 6) {
+      max-width: 260px;
+    }
+
+    @include media(max-width 768px, 6) {
+      width: 175px;
+    }
+  }
+}
+
+
+.product-header-shizo {
+    background: url(../img/schitzo-type.png);
+    @include bg-contain;
+    background-position: top center;
+    background-position: 0 4%;
+    height: 95%;
+  }
+
+  .product-header-widow {
+    background: url("../img/widow-type.png");
+    @include bg-contain;
+    background-position: top center;
+    background-position: 0 4%;
+    height: 95%;
+  }
+
+  .product-header-nightmare {
+    background: url("../img/nightmare-type.png");
+    @include bg-contain;
+    background-position: top center;
+    background-position: 0 4%;
+    height: 95%;
+  }
+
+
 
 // END MODAL MARKUP

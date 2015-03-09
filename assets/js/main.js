@@ -68,7 +68,7 @@ var cornerstoneAPI = (function(options) {
 	openAnimation.to(".l-curtain-right", 0.5, { autoAlpha: 1, right: 0, ease: Back.easeInOut}, 0.25);
 	openAnimation.to(".l-sign-main", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.15);
 	openAnimation.to(".l-sign-left", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.25);
-	openAnimation.to(".l-sign-right", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.25);
+	openAnimation.to(".l-sign-right", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut, onComplete:function(){alert("Let’s put on a show, shall we? By entering, you agree to let us take over your computer and unleash the following side effects: Foul play, shenanigans, and downright no-good tomfoolery. If you agree, it’s not our fault some people never quite return to normal. We’re not evil, just good lookin’.  If you do not, im sure your parents would be proud, too bad. ")}}, 0.25);
 	// openAnimation.to(".l-sign-right, .l-sign-main, .l-sign-left", 1, { left: "1%", yoyo: true, repeatDelay: 0.5, ease: Back.easeInOut});
 
 
@@ -245,6 +245,13 @@ var cornerstoneAPI = (function(options) {
 			$('.l-demo-1').removeClass('add-me');
 			$('.l-demo-2').removeClass('add-me');
 			$('.l-demo-4').removeClass('add-me');
+		});
+
+		$('#btn-demo-4').on('click', function(){
+			$('.l-demo-4').toggleClass('add-me');
+			$('.l-demo-1').removeClass('add-me');
+			$('.l-demo-2').removeClass('add-me');
+			$('.l-demo-3').removeClass('add-me');
 		});
 
 
