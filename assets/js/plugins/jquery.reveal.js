@@ -23,6 +23,7 @@
 		$('#'+modalLocation).reveal($(this).data());
 	});
 
+
 /*---------------------------
  Extend and Execute
 ----------------------------*/

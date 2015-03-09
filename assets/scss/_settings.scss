@@ -96,7 +96,19 @@ $muteGrey: #95a5a6;
 $grey: #7f8c8d;
 $charcoal: #444444;
 
+$primaryRed: #2f070a;
+$secondaryRed: #41292a;
+
 // ----- Type ----- //
+
+button {
+    background: $primaryRed;
+    @include transition(all 0.3s ease-in-out);
+    &:hover {
+        background: lighten($primaryRed, 10%);
+        //background: $secondaryRed;
+    }
+}
 
 // FLASHES
 

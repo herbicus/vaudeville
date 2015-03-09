@@ -14,6 +14,7 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="assets/css/styles.min.css">
+        <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
         <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
     </head>
     <body>
@@ -23,12 +24,38 @@
 
        <!-- HEADER SIGNS -->
         <header>
-            <nav>
+            <nav class="l-desktop-layout">
                 <div class="three-col l-sign-left"></div>
-                <div class="three-col l-sign-main"></div>
+                 
+                 <a href="#" data-reveal-id="productExampleModal">
+                    <div class="three-col l-sign-main"></div>
+                </a>
+                
                 <div class="three-col l-sign-right"></div>
             </nav>
+
+            <div class="l-mobile-layout">
+                <!-- hamburger icon -->
+                <div class="mobile-nav-btn">
+                    <div class="icon"></div>
+                </div>
+                <!--mobile nav-->
+                <a href="#" class="pull-left l-mobile-logo" data-reveal-id="productExampleModal">logo</a>
+                <!-- <a href="#" data-reveal-id="productExampleModal">LOGO</a> -->
+                <nav class="l-mobile-nav">
+                    <ul>
+                        <li class="section-1"><a href="#">PRODUCTS</a></li>
+                        <li class="section-2"><a href="#">VAUDEVILLE</a></li>
+                        <li class="section-4"><a href="#">STORE</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
+
+        <!-- MOBILE HEADER -->
+        <!-- <div class="l-mobile-header l-row">
+
+        </div> -->
 
 
         <!-- STAGE CONTAINER -->
@@ -43,18 +70,25 @@
                 <div class="curtain l-curtain-right"></div>
             </div>
        </div>
+       <!-- END STAGE -->
 
         <section class="content-wrap l-product-container">
             <a href="#" data-reveal-id="productModal">
-                <div class="third"></div>
+                <div class="third">
+                  <h1>Product</h1>
+                </div>
             </a>
 
             <a href="#" data-reveal-id="product2Modal">
-                <div class="third"></div>
+                <div class="third">
+                  <h1>Product 2</h1>
+                </div>
             </a>
 
             <a href="#" data-reveal-id="product3Modal">
-                <div class="third"></div>
+                <div class="third">
+                  <h1>Product 3</h1>
+                </div>
             </a>
 
             <!-- <div class="third"></div>
@@ -63,66 +97,145 @@
         </section>
 
         <!-- Reveal Modals begin -->
+
+
+        <!-- PRODUCT DEMO MODAL -->
+        <div id="productExampleModal" class="reveal-modal" data-reveal>
+            <div class="l-capture-snapshot">
+                <div class="l-row">
+                   <div class="full-width">
+                       <h1>Vaudeville</h1>
+                   </div>
+                   <aside class="l-sidebar-container text-center">
+                       <video id="video" width="640" height="480" autoplay></video>
+                       <br>
+                       <button id="snap">Snap Photo</button>
+                       <br>
+                       <br>
+
+                       <br>
+
+                       <button id="btn-demo-1">Makeup 1</button>
+                       <br><br>
+                       <button id="btn-demo-2">Makeup 2</button>
+                       <br><br>
+                       <button id="btn-demo-3">Makeup 3</button>
+                       <br><br>
+                       <button id="btn-demo-4">Makeup 4</button>
+                   </aside>
+
+                   <!-- CAPTURE PHOTOS -->
+                   <div class="l-main-container">
+                      <canvas id="canvas" width="640" height="480"></canvas>
+
+                      <!-- MAKEUP OVERLAYS -->
+                      <div class="l-makeup-overlay">
+                        <!-- <img src="assets/img/makup-place.png" alt=""> -->
+                        <div class="l-demo-makeup l-demo-1 remove-me"></div>
+                        <div class="l-demo-makeup l-demo-2 remove-me"></div>
+                        <div class="l-demo-makeup l-demo-3 remove-me"></div>
+                        <div class="l-demo-makeup l-demo-4 remove-me"></div>
+                      </div>
+
+                   </div>
+                </div>
+           </div>
+           <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <!-- LEFT PRODUCT MODAL -->
         <div id="productModal" class="reveal-modal" data-reveal>
 
-          <!-- <div class="half">
-              <img src="http://placekitten.com/g/350/300" alt="">
-              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+          <div class="half modal-product-img-1">
+              <img src="assets/img/schitzo-modal-img.png" alt="modal image">
           </div>
-          <div class="half">
-              <h1>Mascara</h1>
-              <hr>
+
+          <div class="half modal-product-copy-1">
+              
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
-              <img src="assets/img/sample-colors.png" alt="">
-          </div> -->
+              <img src="assets/img/modal-colors-img.png" class="text-center" alt="">
+              <br>
+              <div class="l-modal-row">
+                    <div class="three-col">
+                      <h5>$25.99</h5>
+                    </div>
+                    <div class="three-col">
+                      <h5>Quantity</h5>
+                    </div>
+                    <div class="three-col">
+                      <button>Add To Cart</button>
+                    </div>
+              </div>
+              <br>
+              <img src="assets/img/modal-brush-img.png" class="text-center" alt="">
+          </div>
           <!-- <img src="assets/img/modal-place.png" alt=""> -->
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
+        <!-- MIDDLE PRODUCT MODAL -->
+
         <div id="product2Modal" class="reveal-modal" data-reveal>
-          <!-- <div class="half">
-              <img src="http://placekitten.com/g/350/300" alt="">
-              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+
+          <div class="half modal-product-img-1">
+              <img src="assets/img/schitzo-modal-img.png" alt="modal image">
           </div>
-          <div class="half">
-              <h1>Eye Shadow</h1>
-              <hr>
+
+          <div class="half modal-product-copy-1">
+              
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
-              <img src="assets/img/sample-colors.png" alt="">
-          </div> -->
+              <br>
+              <img src="assets/img/modal-full-hack.png" alt="" class="text-center">
+          </div>
+          <!-- <img src="assets/img/modal-place.png" alt=""> -->
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
-        <div id="product3Modal" class="reveal-modal" data-reveal>
-          <!-- <div class="half">
-              <img src="http://placekitten.com/g/350/300" alt="">
-              <cite>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, quod deleniti distinctio, repellendus suscipit ipsum optio sit incidunt illo eveniet. Dolore consequatur soluta maiores. Beatae eaque fugiat alias saepe, soluta.</cite>
+        <!-- RIGHT PRODUCT MODAL -->
+
+          <div id="product3Modal" class="reveal-modal" data-reveal>
+
+            <div class="half modal-product-img-1">
+                <img src="assets/img/schitzo-modal-img.png" alt="modal image">
+            </div>
+
+            <div class="half modal-product-copy-1">
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
+                <img src="assets/img/modal-colors-img.png" class="text-center" alt="">
+                <br>
+                <div class="l-modal-row">
+                      <div class="three-col">
+                        <h5>$25.99</h5>
+                      </div>
+                      <div class="three-col">
+                        <h5>Quantity</h5>
+                      </div>
+                      <div class="three-col">
+                        <button>Add To Cart</button>
+                      </div>
+                </div>
+                <br>
+                <img src="assets/img/modal-brush-img.png" class="text-center" alt="">
+            </div>
+            <!-- <img src="assets/img/modal-place.png" alt=""> -->
+            <a class="close-reveal-modal">&#215;</a>
           </div>
-          <div class="half">
-              <h1>Eye Shadow</h1>
-              <hr>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas eius, vitae dignissimos non, distinctio totam quaerat aliquid? Vel itaque expedita, eligendi ducimus magni, repellat provident, voluptatum et dolorem iste earum!</p>
-              <img src="assets/img/sample-colors.png" alt=""> -->
-          </div>
-          <a class="close-reveal-modal">&#215;</a>
+
+
+          
         </div>
 
         <!-- CHARACTER -->
         <div class="l-character-container" id="box"></div>
 
-
-
-       <!-- END STAGE -->
-
-       
-
       
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js"></script>
-        <!--
+        
         <script src="assets/js/vendor/TweenMax.min.js"></script>
-        -->
+        
         <script src="assets/js/plugins/jquery.reveal.js"></script>
         
         <!-- NO MINIFY - DEV & TEST -->

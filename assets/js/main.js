@@ -74,11 +74,12 @@ var cornerstoneAPI = (function(options) {
 
 
 	var menuAnimation = new TimelineMax({paused: true});
-	menuAnimation.to(".mobile-nav-menu", 0.75, { autoAlpha: 1, left: 0, ease: Back.easeInOut});
+	menuAnimation.to(".l-mobile-layout nav", 0.75, { autoAlpha: 1, left: 0, ease: Back.easeInOut});
 
 	// MOBILE ICON - HAMBURGER
 	$(".mobile-nav-btn").on("click", function(){
 		$(this).toggleClass("open");
+		console.log("clicked");
 
   		if ($(this).hasClass("played")) {
   			menuAnimation.reverse();	
@@ -86,6 +87,16 @@ var cornerstoneAPI = (function(options) {
   			menuAnimation.play();
   		}	
   		$(this).toggleClass("played");
+	});
+
+	$( ".mobile-nav-btn" ).click(function() {
+		console.log("animate clicek");
+	  $( "header .mobile-nav-menu" ).animate({
+	    opacity: 1,
+	    left: "0",
+	  }, 5000, function() {
+	    console.log("worked");
+	  });
 	});
 
 	// BOTTOM BEFORE CLOUSURE
@@ -121,9 +132,12 @@ var cornerstoneAPI = (function(options) {
 	      // console.log(box.position())
 	      // left less than 201
 	      // top less than 210
-	      if (box.position().left < 201 && box.position().top < 210) {
-	      	console.log("in the zone");
-	      }
+	     
+
+	     //  if (box.position().left < 201 && box.position().top < 210) {
+	     //  	console.log("in the zone");
+	    	// //callback()
+	     //  }
 
 
 	    }, 20);
@@ -153,8 +167,87 @@ var cornerstoneAPI = (function(options) {
 
 	    $(window).on("keyup", function(){
 	      box.css({background: standStill})
-
 	    });
+
+	    // CAMERA
+	    // Put event listeners into place
+	    window.addEventListener("DOMContentLoaded", function() {
+	        // Grab elements, create settings, etc.
+	        var canvas = document.getElementById("canvas"),
+	            context = canvas.getContext("2d"),
+	            video = document.getElementById("video"),
+	            videoObj = { "video": true },
+	            errBack = function(error) {
+	                console.log("Video capture error: ", error.code); 
+	            };
+
+	        // Put video listeners into place
+	        if(navigator.getUserMedia) { // Standard
+	            navigator.getUserMedia(videoObj, function(stream) {
+	                video.src = stream;
+	                video.play();
+	            }, errBack);
+	        } else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+	            navigator.webkitGetUserMedia(videoObj, function(stream){
+	                video.src = window.webkitURL.createObjectURL(stream);
+	                video.play();
+	            }, errBack);
+	        }
+	        else if(navigator.mozGetUserMedia) { // Firefox-prefixed
+	            navigator.mozGetUserMedia(videoObj, function(stream){
+	                video.src = window.URL.createObjectURL(stream);
+	                video.play();
+	            }, errBack);
+	        }
+
+	        // Trigger photo take
+	        document.getElementById("snap").addEventListener("click", function() {
+	            context.drawImage(video, 0, 0, 640, 480);
+	        });
+
+	        // Converts image to canvas; returns new canvas element
+	        function convertImageToCanvas(image) {
+	            var canvas = document.createElement("canvas");
+	            canvas.width = image.width;
+	            canvas.height = image.height;
+	            canvas.getContext("2d").drawImage(image, 0, 0);
+
+	            return canvas;
+	        }
+
+	        // Converts canvas to an image
+	        function convertCanvasToImage(canvas) {
+	            var image = new Image();
+	            image.src = canvas.toDataURL("image/png");
+	            return image;
+	        }
+	        
+	    }, false);
+
+		// bx.slidr stuff
+
+		$('#btn-demo-1').on('click', function(){
+			$('.l-demo-1').toggleClass('add-me');
+			$('.l-demo-2').removeClass('add-me');
+			$('.l-demo-3').removeClass('add-me');
+			$('.l-demo-4').removeClass('add-me');
+		});
+
+		$('#btn-demo-2').on('click', function(){
+			$('.l-demo-2').toggleClass('add-me');
+			$('.l-demo-1').removeClass('add-me');
+			$('.l-demo-3').removeClass('add-me');
+			$('.l-demo-4').removeClass('add-me');
+		});
+
+		$('#btn-demo-3').on('click', function(){
+			$('.l-demo-3').toggleClass('add-me');
+			$('.l-demo-1').removeClass('add-me');
+			$('.l-demo-2').removeClass('add-me');
+			$('.l-demo-4').removeClass('add-me');
+		});
+
+
 	}; // END init
 
 	shared.init = init;

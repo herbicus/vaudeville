@@ -6,6 +6,12 @@
 
 header {
 
+  .l-desktop-layout {
+    @include media(max-width 1024px, 6) {
+      display: none;
+    }
+  }
+
   nav {
     width: 100%;
     position: absolute;
@@ -18,6 +24,9 @@ header {
       position: relative;
 
       @include grayscale-hover;
+      &:hover {
+        @include transform(translateY(-20px));
+      }
 
       h1 {
         @include centerer;
@@ -31,6 +40,11 @@ header {
       background-position: top, center;
       top: -15em;
       opacity: 0;
+      
+      @include media(max-width 1290px, 6) {
+        height: 150px;
+      }
+
     }
 
     .l-sign-main {
@@ -40,6 +54,10 @@ header {
       background-position: top, center;
       top: -15em;
       opacity: 0;
+      
+      @include media(max-width 1290px, 6) {
+        height: 200px;
+      }
     }
 
     .l-sign-right {
@@ -48,8 +66,139 @@ header {
       background-position: top, center;
       top: -15em;
       opacity: 0;
+      
+      @include media(max-width 1290px, 6) {
+        height: 150px;
+      }
 
     }
   }
 
+  // @include media(max-width 1270px, 6) {
+
+  // }
+
+  
+
+}
+
+.l-mobile-layout {
+  display: none;
+  background: #000;
+  height: 70px;
+
+  a {
+    background: url("../img/logo-type.png");
+    @include bg-contain;
+    text-indent: -9999px;
+    margin-left: 5%;
+    height: 61px;
+    width: 200px;
+    margin-left: 3%;
+    font-size: 1.75em; 
+
+  }
+
+  // ANIMATED HAMBURGER ICON TOGGLE BUTTON
+  .mobile-nav-btn {
+    position: absolute;
+    z-index: 9999;
+    width: 60px;
+    //height: 120px;
+    left: 89%;
+    @include transition-duration(0.5s);
+
+    .icon {
+      @include transition-duration(0.5s);
+      position: absolute;
+      height: 3px;
+      width: 25px;
+      top: 35px; // position of hamburger
+      left: -3px;
+      background-color: #fff;
+
+      &:before {
+        @include transition-duration(0.5s);
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        content: "";
+        top: -8px;
+      }
+
+      &:after {
+        @include transition-duration(0.5s);
+        position: absolute;
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        content: "";
+        top: 8px;
+      }
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    &.open {
+      .icon {
+        @include transition-duration(0.5s);
+        background: transparent;
+
+        &:before {
+          @include transform( rotateZ(45deg) scaleX(1.25) translate(6px, 5px) );
+        }
+
+        &:after {
+          @include transform( rotateZ(-45deg) scaleX(1.25) translate(5px, -4px) );
+        }
+      }
+    }
+  } // END ANIMATED HAMBURGER TOGGLE BUTTON
+
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 70px; // height of mobile header
+    left: -100%;
+    opacity: 0;
+    ul {
+      text-align: center;
+      li {
+        display: block;
+        padding: 1em 0;
+        background: #262626;
+        border-bottom: 1px solid $charcoal;
+        text-transform: uppercase;
+
+        a {
+          color: #fff;
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+  @include media(max-width 1024px, 6) {
+    display: block;
+  }
+
+  @include media(max-width 1024px, 6) {
+    position: relative;
+    z-index: 9999;
+  }
+
+} // END MOBILE LAYOUT
+
+.l-mobile-header {
+  display: none;
+  height: 70px;
+  background: url("../img/logo-type.png");
+  @include bg-contain;
+  
+  @include media(max-width 1024px, 6) {
+    display: block;
+  }
+  
 }

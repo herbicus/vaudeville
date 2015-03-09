@@ -1,0 +1,96 @@
+// -------------------------------------
+//   Demo - web cam demo
+// -------------------------------------
+// ----- stylings for web cam video/capture
+// -------------------------------------
+
+
+video {
+	width: 150px;
+	height: 150px;
+}
+
+canvas {
+	width: 100%;
+	padding-top: 1em;
+	
+	@include media(max-width 1280px, 6) {
+		width: 550px;
+	}
+
+	@include media(max-width 768px, 6) {
+		width: 400px;
+	}
+}
+
+.l-capture-snapshot {
+	// width: 100%;
+	// max-width: 960px;
+	// margin: 0 auto;
+	// height: 500px;
+	display: table-cell;
+	vertical-align: middle;
+	
+	h1 {
+		text-indent: -9999px;
+		background: url("../img/logo-type.png");
+		@include bg-contain;
+		width: 100%;
+	}
+}
+
+#productExampleModal {
+	display: table;
+}
+
+.l-makeup-overlay {
+	@include coverer;
+	//display: none;
+	pointer-events: none;
+	img {
+		width: 600px;
+		height: 420px;
+		@include centerer;
+		top: 54%;
+		left: 59%;
+		
+	}
+}
+
+
+// IMAGE CAPTURE MODAL STUFF
+.l-demo-makeup {
+	width: 600px;
+	height: 420px;
+	@include centerer;
+	top: 54%;
+	left: 59%;
+}
+
+.l-demo-1 {
+	background: url("../img/makup-place.png");
+	@include bg-contain;
+}
+
+.l-demo-2 {
+	background: url("../img/makup-place1.png");
+	@include bg-contain;
+}
+
+.l-demo-3 {
+	background: url("../img/makup-place2.png");
+	@include bg-contain;
+}
+
+.add-me {
+	display: block !important;
+	//opacity: 1;
+}
+
+.remove-me {
+	display: none;
+	//opacity: 0;
+}
+
+
+

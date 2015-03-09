@@ -16,5 +16,10 @@
   width: 200px;
   height: 300px;
   z-index: 3;
+  
+  @include media(max-width 1024px, 6) {
+    display: none;
+  } 
+
 
 }

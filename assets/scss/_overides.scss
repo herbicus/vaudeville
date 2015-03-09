@@ -1,0 +1,155 @@
+// -------------------------------------
+//   Plugin Overides
+// -------------------------------------
+// ----- Overide/General stylings of plugins
+// -------------------------------------
+
+// REVEAL MODAL STYLINGS
+
+.reveal-modal-bg {
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0,0,0,.8);
+  background: url("../img/modal-bg.jpg");
+  @include bg-cover;
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0; 
+  }
+
+.reveal-modal {
+  visibility: hidden;
+  top: 100px; 
+  left: 50%;
+  //margin-left: -300px;
+  //width: 520px;
+  //width: 100%;
+  float: left;
+  background: #eee url(../img/modal-gloss.png) no-repeat -200px -80px;
+  background: #FFF;
+  //background: url("../img/modal-place.png");
+  @include bg-contain;
+  position: absolute;
+  z-index: 101;
+  //padding: 30px 40px 34px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+  -box-shadow: 0 0 10px rgba(0,0,0,.4);
+  //@include centerer;
+  @include coverer;
+  width: 95%;
+  
+  max-width: 1200px;
+  
+  height: 90%;
+  //top: 50% !important;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+  img {
+    width: 100%;
+    max-width: 100%;
+    
+    @include media(max-width 1024px, 6) {
+      max-width: 200px !important;
+    }
+
+    @include media(max-width 1280px, 6) {
+      max-width: 300px !important;
+    }
+
+  }
+  .half {
+    width: 46.82117%;
+    padding: 0;
+    
+    @include media(max-width 480px, 6) {
+      width: 95%;
+      float: left;
+    }
+    
+  }
+
+  @include media(max-width 1024px, 6) {
+      height: 75%;
+  }
+}
+  
+.reveal-modal.small     { width: 200px; margin-left: -140px;}
+.reveal-modal.medium    { width: 400px; margin-left: -240px;}
+.reveal-modal.large     { width: 600px; margin-left: -340px;}
+.reveal-modal.xlarge    { width: 800px; margin-left: -440px;}
+
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  background: url("../img/close-btn.png");
+  @include bg-contain;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+  font-weight: bold;
+  @include fade-hover;
+  } 
+
+
+.modal-product-img-1 {
+    background: url("../img/modal-left-bg-1.png");
+    background: url("../img/modal-curtain-bg.png");
+    @include bg-cover;
+    height: 100%;
+    
+    img {
+      max-width: 400px;
+      @include centerer;
+      left: 25%;
+    }
+
+    @include media(max-width 480px, 6) {
+      display: none;
+    }
+}
+
+.l-modal-row {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.modal-product-copy-1 {
+  background: url(../img/schitzo-type.png);
+  @include bg-contain;
+  background-position: top center;
+  margin: 2%;
+  background-position: 0 4%;
+  height: 95%;
+  position: relative;
+  overflow: hidden;
+  
+  p {
+    padding-top: 45%;
+  }
+
+  img {
+    //padding: 10%;
+    @include media(max-width 1280px, 6) {
+      max-width: 260px;
+    }
+
+    @include media(max-width 768px, 6) {
+      width: 175px;
+    }
+  }
+}
+
+// END MODAL MARKUP

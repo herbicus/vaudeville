@@ -1,0 +1,16 @@
+
+
+@media screen and (max-width: 1270px) {
+	.three-col .l-sign-main {
+		height: 100px;
+	}
+	
+}
+
+@media screen and (max-width: 1270px) {
+	.three-col .l-sign-left,
+	.three-col .l-sign-right {
+		height: 100px;
+	}
+
+}
