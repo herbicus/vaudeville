@@ -6,72 +6,110 @@ if (!window.console.log) window.console.log = function() {};
 var cornerstoneAPI = (function(options) {
 	var shared = {},
 		options = options || {}
-	
-	// JS MEDIA QUERY
-	// var mq = window.matchMedia('@media all and (max-width: 700px)');
-	// if(mq.matches) {
-	//     // the width of browser is more then 700px
-	// } else {
-	//     // the width of browser is less then 700px
-	// }
-
-	// JS MEDIA QUERY + LISTENER
-	// mq.addListener(function(changed) {
-	//     if(changed.matches) {
-	//         // the width of browser is more then 700px
-	//     } else {
-	//         // the width of browser is less then 700px
-	//     }
-	// });
 
 	// PRELOADER UTILITY
-	// var AceLoadImages = AceLoadImages || function(a, d, z) {
-	// 	a instanceof Array || (a = [a]);
-	// 	for (var e = a.length, f = 0, g = e; g--;) {
-	// 		var b = document.createElement("img");
-	// 		b.onload = function() {
-	// 			f++; 
-	// 			f >= e && isFunction(d) && d(z)
-	// 		};
-	// 		b.src = a[g]; 
-	// 	}
-	// }
+	var AceLoadImages = AceLoadImages || function(a, d, z) {
+		a instanceof Array || (a = [a]);
+		for (var e = a.length, f = 0, g = e; g--;) {
+			var b = document.createElement("img");
+			b.onload = function() {
+				f++; 
+				f >= e && isFunction(d) && d(z)
+			};
+			b.src = a[g]; 
+		}
+	}
 
-	// var isFunction = isFunction || function(functionToCheck) {
-	// 	var getType = {};
-	// 	return functionToCheck && getType.toString.call(functionToCheck) == '[object Function]';
-	// }
+	var isFunction = isFunction || function(functionToCheck) {
+		var getType = {};
+		return functionToCheck && getType.toString.call(functionToCheck) == '[object Function]';
+	}
 
-	
-	// // USE
-	// AceLoadImages([
-	// 	// yourArrayOfImages.jpg,
-	// 	// keepEmComming.jpg,
-	// 	// calls imagesAreLoaded() function at end
-	// ], imagesAreLoaded);
+	AceLoadImages([
+		'assets/img/product-img-shizo-x.png',
+		'assets/img/product-img-shizo-x-hover.png',
+		'assets/img/product-img-widow-x.png',
+		'assets/img/product-img-widow-x-hover.png',
+		'assets/img/product-img-night-x.png',
+		'assets/img/product-img-night-x-hover.png',
+		'assets/img/character-v2.png',
+		'assets/img/move-left-x.gif',
+		'assets/img/move-right-x.gif',
+		'assets/img/curtain-left_v1.2.png',
+		'assets/img/curtain-right_v1.2.png',
+		'assets/img/curtain-top_v1.2.png',
+		'assets/img/l-stage-bg.jpg'
+	], imagesAreLoaded);
 
-	// // USE A PRELOADING IMAGE/TWEENMAX AFTER LOADS
-	// function imagesAreLoaded() {
-	// 	// do whatever it is that cant happen before the images are ready
-	// 	TweenMax.to("#splash-overlay" , 0.75, {
-	//   		scale: 0,
-	//   		autoAlpha: 0,
-	//   		ease: Back.easeInOut
-	//   	});
-	// }
+	function imagesAreLoaded() {
+	  	TweenMax.to(".spinner" , 0.75, {
+	  		autoAlpha: 0,
+	  		ease: Back.easeInOut
+	  	});
+
+	  	TweenMax.to(".l-callout-panel" , 0.75, {
+	  		scale: 1,
+	  		autoAlpha: 1,
+	  		ease: Back.easeInOut
+	  	});
+	}
 	// END PRELOAD UTILITY
 
-	var openAnimation = new TimelineMax({paused: true});
-	
-	openAnimation.to(".l-curtain-top", 0.5, { autoAlpha: 1, top: 0, marginTop: 0, ease: Quad.easeInOut});
-	openAnimation.to(".l-curtain-left", 0.5, { autoAlpha: 1, left: 0, ease: Back.easeInOut}, 0.25);
-	openAnimation.to(".l-curtain-right", 0.5, { autoAlpha: 1, right: 0, ease: Back.easeInOut}, 0.25);
+	var openAnimation = new TimelineMax({paused: true});	
+	openAnimation.to(".l-curtain-top", 0.75, { autoAlpha: 1, top: 0, marginTop: 0, ease: Back.easeInOut});
+	openAnimation.to(".l-curtain-left", 0.75, { autoAlpha: 1, rotation: 0, ease: Back.easeInOut}, 0.25);
+	openAnimation.to(".l-curtain-right", 0.75, { autoAlpha: 1, rotation: 0, ease: Back.easeInOut}, 0.25);
+	openAnimation.to(".l-curtain-left", 0.75, { autoAlpha: 1, left: 0, rotation: 0, ease: Back.easeInOut}, 0.25);
+	openAnimation.to(".l-curtain-right", 0.75, { autoAlpha: 1, right: 0, rotation: 0, ease: Back.easeInOut}, 0.25);
 	openAnimation.to(".l-sign-main", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.15);
 	openAnimation.to(".l-sign-left", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.25);
-	openAnimation.to(".l-sign-right", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut, onComplete:function(){alert("Let’s put on a show, shall we? By entering, you agree to let us take over your computer and unleash the following side effects: Foul play, shenanigans, and downright no-good tomfoolery. If you agree, it’s not our fault some people never quite return to normal. We’re not evil, just good lookin’.  If you do not, im sure your parents would be proud, too bad. ")}}, 0.25);
-	// openAnimation.to(".l-sign-right, .l-sign-main, .l-sign-left", 1, { left: "1%", yoyo: true, repeatDelay: 0.5, ease: Back.easeInOut});
+	openAnimation.to(".l-sign-right", 0.5, { autoAlpha: 1, top: 0, ease: Back.easeInOut}, 0.5);
 
+	$("#l-btn-yes").on("click", function(){
 
+		TweenMax.to(".l-callout-panel-copy" , 0.25, {
+	  		autoAlpha: 0,
+	  		ease: Quad.easeInOut
+	  	});
+
+		TweenMax.to(".l-splash-yes-copy" , 2.5, {
+	  		css: {color: "#CD0006", scale: 1.25},
+	  		ease: Quad.easeInOut,
+	  		onComplete: function() {
+	  			TweenMax.to(".l-splash-overlay" , 0.5, {
+			  		autoAlpha: 0,
+			  		ease: Quad.easeInOut
+			  	});
+
+				openAnimation.play();
+	  		}
+	  	});
+	  	
+	});
+
+	$("#l-btn-no").on("click", function(){
+
+		TweenMax.to(".l-callout-panel-copy" , 0.25, {
+	  		autoAlpha: 0,
+	  		ease: Quad.easeInOut
+	  	});
+
+		TweenMax.to(".l-splash-no-copy" , 2, {
+	  		css: {color: "#CD0006", scale: 1.25},
+	  		ease: Quad.easeInOut,
+	  		onComplete: function() {
+	  			TweenMax.to(".l-splash-overlay" , 0.5, {
+			  		autoAlpha: 0,
+			  		ease: Quad.easeInOut
+			  	});
+
+				openAnimation.play();
+	  		}
+	  	});
+	  	
+	});
+
+	
 
 	var menuAnimation = new TimelineMax({paused: true});
 	menuAnimation.to(".l-mobile-layout nav", 0.75, { autoAlpha: 1, left: 0, ease: Back.easeInOut});
@@ -89,23 +127,8 @@ var cornerstoneAPI = (function(options) {
   		$(this).toggleClass("played");
 	});
 
-	$( ".mobile-nav-btn" ).click(function() {
-		console.log("animate clicek");
-	  $( "header .mobile-nav-menu" ).animate({
-	    opacity: 1,
-	    left: "0",
-	  }, 5000, function() {
-	    console.log("worked");
-	  });
-	});
-
 	// BOTTOM BEFORE CLOUSURE
 	var init = function() {
-
-		// OPENING ANIMATION
-		window.onload = function(){
-			openAnimation.play();
-		}
     
 	    var pane = $('#pane'),
 	      box = $('#box'),
@@ -150,8 +173,8 @@ var cornerstoneAPI = (function(options) {
 
 	    $(window).on("keydown", function(){
 	      if (event.keyCode == 37) {
-	        //console.log("left");
-	        box.css({background: moveLeft})
+			//console.log("left");
+			box.css({background: moveLeft})
 	      }else if(event.keyCode == 39){
 	        //console.log("right");
 	        box.css({background: moveRight})

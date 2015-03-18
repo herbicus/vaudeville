@@ -5,7 +5,8 @@
 // -------------------------------------
 
 .l-stage-container {
-	background: url(../img/bg_v1.2.png);
+	//background: url(../img/bg_v1.2.png);
+	background: url(../img/l-stage-bg.jpg);
 	@include bg-cover;
 	position: absolute;
 	width: 100%;
@@ -24,14 +25,6 @@
 
 .l-curtain-container {
 	background: transparent;
-  // COMMENT BELOW IF USE 3 CURTAINS
-//  background: url("../img/asset-whole.png");
-//  width: 100%;
-//  height: 100%;
-//  position: relative;
-//  z-index: 5;
-//  @include bg-cover;
-//  background-position: top, center;
 
 	.l-curtain-top {
 		background: url("../img/curtain-top_v1.2.png");
@@ -47,30 +40,38 @@
 	}
 
 	.l-curtain-left {
-		background: url("../img/asset-left.png");
 		background: url("../img/curtain-left_v1.2.png");
 		@include bg-contain;
 		background-position: left, center;
 		width: 32%;
 		top: 0;
-		left: 0;
 		left: -20%;
 		opacity: 0;
 		z-index: 4;
+		@include transform(rotate(45deg));
+		-webkit-transform-origin: top left;
+		   -moz-transform-origin: top left;
+		    -ms-transform-origin: top left;
+		     -o-transform-origin: top left;
+		        transform-origin: top left;
 
 	}
 
 	.l-curtain-right {
-		background: url("../img/asset-right.png");
 		background: url("../img/curtain-right_v1.2.png");
 		@include bg-contain;
 		background-position: right, center;
 		width: 30%;
 		top: 0;
-		right: 0;
 		right: -20%;
 		opacity: 0;
 		z-index: 4;
+		@include transform(rotate(-45deg));
+		-webkit-transform-origin: top right;
+		   -moz-transform-origin: top right;
+		    -ms-transform-origin: top right;
+		     -o-transform-origin: top right;
+		        transform-origin: top right;
 	}
 
 	@include media(max-width 1024px, 6) {
@@ -111,6 +112,7 @@
 	@include centerer;
 	top: 55%;
 	height: 600px;
+	
 	.third {
 		height: 300px;
 		margin: 0 0.77%;
@@ -150,24 +152,36 @@
 	    	box-shadow: 0 transparent !important;
 	    }
 	    &:active {
-	      //box-shadow: none;
-	      box-shadow: 0 transparent !important;
+	      	box-shadow: 0 transparent !important;
 	    }
 	}
 
 	.l-product-shizo {
 		background: url("../img/product-img-shizo.png");
+		background: url("../img/product-img-shizo-x.png");
 		@include bg-cover;
+		&:hover {
+			background: url("../img/product-img-shizo-x-hover.png");
+			@include bg-cover;
+		}
 	}
 
 	.l-product-widow {
-		background: url("../img/product-img-widow.png");
+		background: url("../img/product-img-widow-x.png");
 		@include bg-cover;
+		&:hover {
+			background: url("../img/product-img-widow-x-hover.png");
+			@include bg-cover;
+		}
 	}
 
 	.l-product-night {
-		background: url("../img/product-img-night.png");
+		background: url("../img/product-img-night-x.png");
 		@include bg-cover;
+		&:hover {
+			background: url("../img/product-img-night-x-hover.png");
+			@include bg-cover;
+		}
 	}
 
 	@include media(max-width 1024px, 6) {
@@ -186,4 +200,3 @@
 	  top: 70%;
 	}
 }
-

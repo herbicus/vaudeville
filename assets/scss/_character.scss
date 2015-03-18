@@ -5,21 +5,21 @@
 // -------------------------------------
 
 .l-character-container {
-  background: url(../img/character-v2.png);
-  -webkit-background-size: contain !important;
-  -o-background-size: contain !important;
-  background-size: contain !important;
-  background-position: center, center !important;
-  background-repeat: no-repeat !important;
-  @include centerer;
-  top: 70%;
-  width: 200px;
-  height: 300px;
-  z-index: 3;
-  
-  @include media(max-width 1024px, 6) {
-    display: none;
-  } 
+    background: url(../img/character-v2.png);
+    -webkit-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat !important;
+    @include centerer;
+    top: 70%;
+    width: 200px;
+    height: 300px;
+    z-index: 3;
+
+    @include media(max-width 1024px, 6) {
+        display: none;
+    } 
 
 
 }

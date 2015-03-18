@@ -1,0 +1,199 @@
+// -------------------------------------
+//   Splash Overlay 
+// -------------------------------------
+// ----- Splash overlay stylings and CSS animations
+// -------------------------------------
+
+.l-splash-overlay {
+	@include coverer;
+	z-index: 9999;
+	background: rgba(0, 0, 0, 0.95);
+	.l-callout-panel {
+		opacity: 0;
+		background: #FFF; 
+		@include centerer;
+		max-width: 600px;
+		padding: 1em 2%;
+		border-radius: 10px;
+		background: url("../img/logo-type.png");
+		@include bg-contain;
+		background-position: top center; 
+		width: 100%;
+		h2 {
+			padding-top: 5em;
+			color: #fff;
+			letter-spacing: 1px; 
+		}
+		p {
+			color: #fff;
+			padding: 10px 0;
+			letter-spacing: 2px; 
+		}
+
+		button {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		
+	}
+
+	.l-splash-arrow {
+		width: 150px;
+		height: 50px;
+		@include centerer;
+		top: 0;
+		left: 138%;
+		background: url("../img/splash-arrow.png");
+		@include bg-contain;
+		opacity: 0;
+		-webkit-animation: arrow-blink 5s ease-in-out;
+		   -moz-animation: arrow-blink 5s ease-in-out;
+		     -o-animation: arrow-blink 5s ease-in-out;
+		        animation: arrow-blink 5s ease-in-out;
+		
+	}
+
+
+	@-webkit-keyframes arrow-blink {
+		 0% { opacity: 0; }
+		10% { opacity: 1; }
+		20% { opacity: 0; }
+		30% { opacity: 1; }
+		40% { opacity: 0; }
+		50% { opacity: 1; }
+		60% { opacity: 0; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 1; }
+	   100% { opacity: 0; }
+	}
+	@-o-keyframes arrow-blink {
+		 0% { opacity: 0; }
+		10% { opacity: 1; }
+		20% { opacity: 0; }
+		30% { opacity: 1; }
+		40% { opacity: 0; }
+		50% { opacity: 1; }
+		60% { opacity: 0; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 1; }
+	   100% { opacity: 0; }
+	}
+	@-moz-keyframes arrow-blink {
+		 0% { opacity: 0; }
+		10% { opacity: 1; }
+		20% { opacity: 0; }
+		30% { opacity: 1; }
+		40% { opacity: 0; }
+		50% { opacity: 1; }
+		60% { opacity: 0; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 1; }
+	   100% { opacity: 0; }
+	}
+	@keyframes arrow-blink {
+		 0% { opacity: 0; }
+		10% { opacity: 1; }
+		20% { opacity: 0; }
+		30% { opacity: 1; }
+		40% { opacity: 0; }
+		50% { opacity: 1; }
+		60% { opacity: 0; }
+		70% { opacity: 1; }
+		80% { opacity: 0; }
+		90% { opacity: 1; }
+	   100% { opacity: 0; }
+	}
+
+	.spinner {
+		width: 100px;
+		height: 100px;
+		position: relative;
+		margin: 100px auto;
+		@include centerer;
+		top: 40%;
+
+		h6 {
+			position: absolute;
+			top: 120px;
+			left: 20px;
+		}
+	}
+
+	.double-bounce1, .double-bounce2 {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: #333;
+		opacity: 0.6;
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		-webkit-animation: bounce 2.0s infinite ease-in-out; 
+		-moz-animation: bounce 2.0s infinite ease-in-out; 
+		-o-animation: bounce 2.0s infinite ease-in-out; 
+		animation: bounce 2.0s infinite ease-in-out; 
+	}
+
+	.double-bounce2 {
+		-webkit-animation-delay: -1.0s;
+	       -moz-animation-delay: -1.0s;
+	         -o-animation-delay: -1.0s;
+	            animation-delay: -1.0s;
+	}
+
+
+
+	@-webkit-keyframes bounce {
+		0%, 100% { -webkit-transform: scale(0.0);
+			       -moz-transform: scale(0.0);
+			        -ms-transform: scale(0.0);
+			         -o-transform: scale(0.0);
+			            transform: scale(0.0); }
+		50% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(1.0);
+		        -ms-transform: scale(1.0);
+		         -o-transform: scale(1.0);
+		            transform: scale(1.0); }
+	}
+	@-o-keyframes bounce {
+		0%, 100% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(0.0);
+		        -ms-transform: scale(0.0);
+		         -o-transform: scale(0.0);
+		            transform: scale(0.0); }
+		50% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(1.0);
+		        -ms-transform: scale(1.0);
+		         -o-transform: scale(1.0);
+		            transform: scale(1.0); }
+	}
+	@-moz-keyframes bounce {
+		0%, 100% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(0.0);
+		        -ms-transform: scale(0.0);
+		         -o-transform: scale(0.0);
+		            transform: scale(0.0); }
+		50% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(1.0);
+		        -ms-transform: scale(1.0);
+		         -o-transform: scale(1.0);
+		            transform: scale(1.0); }
+	}
+	@keyframes bounce {
+		0%, 100% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(0.0);
+		        -ms-transform: scale(0.0);
+		         -o-transform: scale(0.0);
+		            transform: scale(0.0); }
+		50% { -webkit-transform: scale(0.0);
+		       -moz-transform: scale(1.0);
+		        -ms-transform: scale(1.0);
+		         -o-transform: scale(1.0);
+		            transform: scale(1.0); }
+	}
+	 
+}

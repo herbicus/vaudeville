@@ -7,15 +7,11 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Herb Torres">
-        
 
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
         <link rel="icon" type="logo" href="assets/img/favicon.png">
         <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet' type='text/css'>
-
+        
         <link rel="stylesheet" href="assets/css/styles.min.css">
-        <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
         <script src="assets/js/vendor/modernizr-2.8.0.min.js"></script>
     </head>
     <body>
@@ -42,7 +38,7 @@
                 </div>
                 <!--mobile nav-->
                 <a href="#" class="pull-left l-mobile-logo" data-reveal-id="productExampleModal">logo</a>
-                <!-- <a href="#" data-reveal-id="productExampleModal">LOGO</a> -->
+              
                 <nav class="l-mobile-nav">
                     <ul>
                         <li class="section-1"><a href="#">PRODUCTS</a></li>
@@ -53,19 +49,31 @@
             </div>
         </header>
 
-        <!-- MOBILE HEADER -->
-        <!-- <div class="l-mobile-header l-row">
+        <!-- SPLASH -->
+        <div class="l-splash-overlay">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+                <h6 class="text-center">loading...</h6>
+            </div>
+            <div class="l-callout-panel text-center">
+                <div class="l-splash-arrow"></div>
+                <h2 class="l-callout-panel-copy">Let’s put on a show, shall we?</h2>
+                <p class="l-callout-panel-copy">By entering, you agree to let us take over your computer and unleash the following side effects: Foul play, shenanigans, and downright no-good tomfoolery.</p>
+                <button id="l-btn-yes" class="l-callout-panel-copy">Yes</button>
+                <button id="l-btn-no" class="l-callout-panel-copy">No</button>
+                <br>
+                <p class="l-splash-yes-copy">If Yes: Remember, it’s not our fault some people never quite return to normal. We’re not evil, just good lookin’.</p>
 
-        </div> -->
-
+                <p class="l-splash-no-copy">If No: Your parents would be proud, too bad.</p>
+                
+            </div>
+        </div>
 
         <!-- STAGE CONTAINER -->
        <div class="l-stage-container">
             <!-- CURTAINS -->
             <div class="l-curtain-container" id="pane">
-                <!-- <img src="assets/img/asset-top.png" alt="curtain-top" class="curtain l-curtain-top">
-                <img src="assets/img/asset-left.png" alt="curtain-top" class="curtain l-curtain-left">
-                <img src="assets/img/asset-right.png" alt="curtain-top" class="curtain l-curtain-right"> -->
                 <div class="curtain l-curtain-top"></div>
                 <div class="curtain l-curtain-left"></div>
                 <div class="curtain l-curtain-right"></div>
@@ -91,10 +99,6 @@
                   <!-- <h1>Nightmare</h1> -->
                 </div>
             </a>
-
-            <!-- <div class="third"></div>
-            <div class="third"></div>
-            <div class="third"></div> -->
         </section>
 
         <!-- Reveal Modals begin -->
@@ -116,13 +120,16 @@
 
                        <br>
 
-                       <button id="btn-demo-1">Makeup 1</button>
-                       <br><br>
-                       <button id="btn-demo-2">Makeup 2</button>
-                       <br><br>
-                       <button id="btn-demo-3">Makeup 3</button>
-                       <br><br>
-                       <button id="btn-demo-4">Makeup 4</button>
+                       
+                      <!--  <br><br> -->
+                    <button id="btn-demo-4">Killer</button>
+                    <br><br>
+                    <button id="btn-demo-2">Easy Action</button>
+                    <br><br>
+                    <button id="btn-demo-3">Love It to Death</button>
+                    <br><br>
+                    <button id="btn-demo-1">Pretties for You</button>
+                       
                    </aside>
 
                    <!-- CAPTURE PHOTOS -->
@@ -131,7 +138,6 @@
 
                       <!-- MAKEUP OVERLAYS -->
                       <div class="l-makeup-overlay">
-                        <!-- <img src="assets/img/makup-place.png" alt=""> -->
                         <div class="l-demo-makeup l-demo-1 remove-me"></div>
                         <div class="l-demo-makeup l-demo-2 remove-me"></div>
                         <div class="l-demo-makeup l-demo-3 remove-me"></div>
@@ -145,7 +151,7 @@
         </div>
 
         <!-- LEFT PRODUCT MODAL -->
-        <div id="productModal" class="reveal-modal" data-reveal>
+        <!-- <div id="productModal" class="reveal-modal" data-reveal>
 
           <div class="half modal-product-img-1">
               <img src="assets/img/schitzo-modal-img.png" alt="modal image">
@@ -153,7 +159,7 @@
 
           <div class="half modal-product-copy-1">
               
-              <h1>Schizo</h1>
+              <h1>Schizofrantic</h1>
               <p>It doesn’t take a ouija board find an alter ego. Besides, no one has time to wait for the dead anymore. Just pick a personality and we’ll do the rest.</p>
               <img src="assets/img/modal-colors-img.png" class="text-center" alt="">
               <br>
@@ -171,13 +177,54 @@
               <br>
               <img src="assets/img/modal-brush-img.png" class="text-center" alt="">
           </div>
-          <!-- <img src="assets/img/modal-place.png" alt=""> -->
           <a class="close-reveal-modal">&#215;</a>
+        </div> -->
+        <div id="productModal" class="reveal-modal" data-reveal>
+
+            <div class="half modal-product-img-1">
+                <img src="assets/img/schitzo-modal-img.png" alt="modal image">
+            </div>
+
+            <div class="half modal-product-copy-1 prouct-header-nightmare">
+
+                <div class="l-modal-row l-modal-copy-padding">
+                    <div class="half">
+                        <h1>Schizofrantic</h1>
+                        <p>It doesn’t take a ouija board find an alter ego. Besides, no one has time to wait for the dead anymore. Just pick a personality and we’ll do the rest.</p>
+                    </div>
+                    
+                    <div class="half l-modal-copy-colors"></div>
+                </div>
+                
+                
+                <br>
+
+                <div class="l-modal-row">
+                    <div class="three-col">
+                        <h5>$25.99</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <h5>Quantity</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <button>Add To Cart</button>
+                    </div>
+
+                </div>
+
+                <br>
+                <!-- <img src="assets/img/modal-brush-img.png" class="text-center" alt=""> -->
+                <div class="l-modal-stroke row"></div>
+        
+                <a class="close-reveal-modal">&#215;</a>
+            </div>        
         </div>
 
         <!-- MIDDLE PRODUCT MODAL -->
 
-        <div id="product2Modal" class="reveal-modal" data-reveal>
+        <!-- <div id="product2Modal" class="reveal-modal" data-reveal>
 
           <div class="half modal-product-img-1">
               <img src="assets/img/widow-modal-img.png" alt="modal image">
@@ -190,49 +237,133 @@
               <br>
               <img src="assets/img/modal-full-hack.png" alt="" class="text-center">
           </div>
-          <!-- <img src="assets/img/modal-place.png" alt=""> -->
           <a class="close-reveal-modal">&#215;</a>
+        </div> -->
+
+        <div id="product2Modal" class="reveal-modal" data-reveal>
+
+            <div class="half modal-product-img-1">
+                <img src="assets/img/widow-modal-img.png" alt="modal image">
+            </div>
+
+            <div class="half modal-product-copy-2 prouct-header-nightmare">
+
+                <div class="l-modal-row l-modal-copy-padding">
+                    <div class="half">
+                        <h1>Black Widow</h1> 
+                        <p>Dominate and possess the smaller, weaker male species. With long, deadly lashes, you can lure the attention of your unsuspecting prey.</p>
+                    </div>
+                    
+                    <div class="half l-modal-copy-colors"></div>
+                </div>
+                
+                
+                <br>
+
+                <div class="l-modal-row">
+                    <div class="three-col">
+                        <h5>$25.99</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <h5>Quantity</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <button>Add To Cart</button>
+                    </div>
+
+                </div>
+
+                <br>
+                <!-- <img src="assets/img/modal-brush-img.png" class="text-center" alt=""> -->
+                <div class="l-modal-stroke row"></div>
+        
+                <a class="close-reveal-modal">&#215;</a>
+            </div>        
         </div>
 
         <!-- RIGHT PRODUCT MODAL -->
 
-          <div id="product3Modal" class="reveal-modal" data-reveal>
+        <!-- <div id="product3Modal" class="reveal-modal" data-reveal>
 
             <div class="half modal-product-img-1">
                 <img src="assets/img/night-modal-img.png" alt="modal image">
             </div>
 
             <div class="half modal-product-copy-3 prouct-header-nightmare">
-                
+
                 <h1>Nightmare</h1>
                 <p>Welcome to our nightmare, we think you’re gonna like it. Choose carefully who you lock gazes with, the thought of you will keep them tossing and turning.</p>
                 <img src="assets/img/modal-colors-img.png" class="text-center" alt="">
                 <br>
+
                 <div class="l-modal-row">
-                      <div class="three-col">
+                    <div class="three-col">
                         <h5>$25.99</h5>
-                      </div>
-                      <div class="three-col">
+                    </div>
+
+                    <div class="three-col">
                         <h5>Quantity</h5>
-                      </div>
-                      <div class="three-col">
+                    </div>
+
+                    <div class="three-col">
                         <button>Add To Cart</button>
-                      </div>
+                    </div>
+
                 </div>
+
                 <br>
                 <img src="assets/img/modal-brush-img.png" class="text-center" alt="">
+  
+                <a class="close-reveal-modal">&#215;</a>
+            </div>        
+        </div> -->
+        <div id="product3Modal" class="reveal-modal" data-reveal>
+
+            <div class="half modal-product-img-1">
+                <img src="assets/img/night-modal-img.png" alt="modal image">
             </div>
-            <!-- <img src="assets/img/modal-place.png" alt=""> -->
-            <a class="close-reveal-modal">&#215;</a>
-          </div>
 
+            <div class="half modal-product-copy-3 prouct-header-nightmare">
 
-          
+                <div class="l-modal-row l-modal-copy-padding">
+                    <div class="half">
+                        <h1>Nightmare</h1>
+                        <p>Welcome to our nightmare, we think you’re gonna like it. Choose carefully who you lock gazes with, the thought of you will keep them tossing and turning.</p>
+                    </div>
+
+                    <div class="half l-modal-copy-colors"></div>
+                </div>
+                
+                
+                <br>
+
+                <div class="l-modal-row">
+                    <div class="three-col">
+                        <h5>$25.99</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <h5>Quantity</h5>
+                    </div>
+
+                    <div class="three-col">
+                        <button>Add To Cart</button>
+                    </div>
+
+                </div>
+
+                <br>
+                <!-- <img src="assets/img/modal-brush-img.png" class="text-center" alt=""> -->
+                <div class="l-modal-stroke row"></div>
+        
+                <a class="close-reveal-modal">&#215;</a>
+            </div>        
         </div>
 
         <!-- CHARACTER -->
         <div class="l-character-container" id="box"></div>
-
       
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
@@ -242,11 +373,11 @@
         
         <script src="assets/js/plugins/jquery.reveal.js"></script>
         
-        <!-- NO MINIFY - DEV & TEST -->
-        <script src="assets/js/main.js"></script>
-        <!-- <script src="assets/js/main.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+
+        <!--
+        <script src="assets/js/main.js"></script> 
         -->
-        <!-- REMOVE main.js/UNCOMMENT main.min.js FOR PRODUCTION -->
 
         <!-- LIVERELOADING FOR GRUNT -->
         <script src="//localhost:35729/livereload.js"></script>

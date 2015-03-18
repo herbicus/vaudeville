@@ -24,10 +24,6 @@ canvas {
 }
 
 .l-capture-snapshot {
-	// width: 100%;
-	// max-width: 960px;
-	// margin: 0 auto;
-	// height: 500px;
 	display: table-cell;
 	vertical-align: middle;
 	
@@ -37,6 +33,15 @@ canvas {
 		@include bg-contain;
 		width: 100%;
 	}
+}
+
+.l-sidebar-container {
+	background: url(../img/character-v2.png);
+	@include bg-contain;
+	background-position: left bottom;
+	-webkit-background-size: 30%; 
+	-o-background-size: 30%; 
+	background-size: 30%; 
 }
 
 #productExampleModal {
@@ -52,8 +57,7 @@ canvas {
 		height: 420px;
 		@include centerer;
 		top: 54%;
-		left: 59%;
-		
+		left: 59%;		
 	}
 }
 
